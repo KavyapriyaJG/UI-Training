@@ -1,0 +1,69 @@
+/* CSS reset code */
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+}
+/* Title */
+header{
+    background-color: #145f94;
+    color: #ffffff;
+    padding: 32px;
+    text-align:center;
+    font-weight: 400;
+    font-size:14px;
+    letter-spacing:-0.2px;
+}
+
+/* Outer contaier */
+.container{
+    margin:40px auto 2px auto;
+    width: 84%;
+}
+.container-left{
+    width:60.6555555%;
+    float:left;
+}
+.container-right{
+    width:38%;
+    float:right;
+}
+
+/* Cards */
+.card{
+    border: 1px solid #145f94; 
+    margin-bottom: 21px;
+}
+/* Cards of right container */
+.container-right .card{
+    margin-bottom: 25px; 
+}
+
+/* Contents of the card parent */
+.card *{ 
+    padding:13px 11px;
+}
+.card-title{
+    background-color: #145f94;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.card-description{
+    line-height:26px;
+    font-size:18px;
+    font-weight:400;
+    color: #433E3E;
+    word-spacing: 1px;
+    text-align: justify;
+    background-color: #f6f6f6;
+}
+
+/* clearfix for the container */
+.clear-fix{
+    clear:both;
+}
+

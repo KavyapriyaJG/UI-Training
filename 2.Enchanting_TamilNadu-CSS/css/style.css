@@ -1,0 +1,115 @@
+/* CSS spacing reset */
+body{
+    margin:0;   /*to remove the default margin of body tag*/
+    font-family: 'Roboto';
+}
+
+/* Colour Theme of the page */
+.title-box{
+    background-color: #43133e;
+    color: #ffffff;
+}
+.footer-box, button{
+    background-color: #7a1655;
+    color:#ffffff;
+}
+button{
+    cursor: pointer;
+}
+
+/* Title */
+header{
+    text-align: center;
+}
+header h1{
+    margin:0;
+    padding:50px;
+    font-weight: 900;
+    font-size: 50px;
+    font-family: 'Roboto Condensed';
+}
+
+/* Cover Image */
+#cover-pic{
+    width:100%;
+    height:1000px;
+    padding-bottom:80px;
+}
+
+/* Desciptive cards */
+.container-box{
+    margin:auto;
+    width:88%;
+}
+.row{
+    padding-top:0px;
+    padding-bottom:60px;
+}
+.cols{
+    width:31.35%;
+    display: inline-block;
+    padding:0.9%;
+    font-family: 'Roboto';
+}
+.cols h2{
+    font-size:35px;
+    color: #383838;
+    font-weight: 300;
+    margin-top:18px;
+    margin-bottom:0px;
+}
+.cols h3{
+    margin-top:10px;
+    font-weight: 700;
+}
+.cols p{
+    font-size: 19px;
+    padding-top: 7px;
+    font-weight: 300;
+}
+.cols img{
+    width:100%;
+}
+.cols button{
+    border:0px;
+    padding:13px 25px;
+    font-size:18px;
+}
+
+/* Caption for the page */
+.content-wrapper{
+    margin:auto;
+    width:76%;
+    margin-bottom: 90px;
+    font-family: 'Roboto';
+}
+.content-wrapper h1{
+    color:#7a1655;
+    font-size:75px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom:10px;
+}
+.content-wrapper p{
+    font-size: 31px;
+    font-weight: 100;
+    line-height: 45px;
+    text-align: justify;
+    font-family: 'Roboto';
+}
+
+/* Copyright footer */
+footer{
+    padding:15px;
+    font-family: 'Roboto';
+}
+footer h2{
+    margin-bottom: 0px;
+    font-weight: 500;
+}
+footer p{
+    line-height:13px;
+    font-size:19px;
+    font-weight: 300;
+    margin-top: 8px;
+}
