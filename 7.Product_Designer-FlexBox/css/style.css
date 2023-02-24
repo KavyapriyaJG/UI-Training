@@ -1,0 +1,151 @@
+/* CSS reset */
+*{
+    margin:0;
+    padding:0;
+
+    box-sizing: border-box;
+    overflow:auto;
+}
+body{
+    background-color: #000;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* ================================TITLE CONTENT=================================== */
+.designer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 130px;
+    width:80%;
+    margin:40px auto auto;
+}
+/* Designer Mail */
+.designer-mail{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 24px;
+}
+/* Designer Name*/
+.designer-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 6px;
+}
+.designer-name h1{
+    font-weight: 300;
+    font-size: 150px;
+}
+.bold{
+    font-weight: 900;
+}
+.designer-name h3{
+    font-size: 50px;
+    color: #cecece;
+}
+.blue{
+    color: #4990e2;
+}
+/* =================================GALLERY CONTENT================================ */
+.gallery{
+    width:80%;
+    margin:100px auto auto;
+    display:flex;
+    flex-wrap: wrap; 
+    row-gap: 20px;
+    column-gap: 20px;
+    justify-content: center;
+}
+.gallery-image{
+    width: 400px;
+}
+.gallery-image img{
+    width: 100%;
+}
+
+/* =================================BRANDS CONTENT================================= */
+.brands-content{
+    display:flex;
+    flex-direction: column;
+    row-gap:100px;
+    margin-top: 175px;
+}
+/* ----------Brands Heading--------------- */
+.brand-heading{
+    display:flex;
+    justify-content: center;
+}
+.brand-heading h2{
+    font-size: 50px;
+    color: #cecece;
+}
+.green{
+    color: #87d979;
+}
+/* --------Brands Logos Wrapper----------- */
+.brands-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width:80%;
+    margin:auto;
+}
+.brand-logo{
+    display: flex;
+    justify-content: center;
+}
+.brand-logo img{
+    width: 60%;
+}
+/* ===============================FOOTER CONTENT=================================== */
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    row-gap:120px;
+    margin: 280px auto 170px;
+}
+/* -----------Designer Border---------- */
+.divider{
+    display: flex;
+    justify-content:space-between;
+    width:15%;
+    margin:auto;
+}
+.small-divider{
+    width: 12%;
+}
+.large-divider{
+    width: 76%;
+}
+/* ------------Social Icons------------- */
+.social-icons{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    column-gap: 20px;
+}
+.icon{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size:32px;
+    border-radius:50%;
+    border: 1px solid #bab6b6;
+}
+/* -------- Caption for the page---------- */
+
+.footer-caption{
+    display: flex;
+    justify-content: center;
+}
+.footer-caption p{
+    font-size: 20px;
+    font-weight: 600;
+}
