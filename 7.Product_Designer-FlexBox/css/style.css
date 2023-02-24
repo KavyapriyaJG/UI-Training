@@ -17,8 +17,7 @@ body{
     display: flex;
     flex-direction: column;
     row-gap: 130px;
-    width:80%;
-    margin:40px auto auto;
+    padding: 40px 172px 0px;
 }
 /* Designer Mail */
 .designer-mail{
@@ -50,8 +49,9 @@ body{
 }
 /* =================================GALLERY CONTENT================================ */
 .gallery{
-    width:80%;
-    margin:100px auto auto;
+    margin-top:100px;
+    padding-right: 50px;
+    padding-left: 50px;
     display:flex;
     flex-wrap: wrap; 
     row-gap: 20px;
@@ -90,15 +90,12 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width:80%;
-    margin:auto;
+    column-gap:100px;
 }
 .brand-logo{
     display: flex;
     justify-content: center;
-}
-.brand-logo img{
-    width: 60%;
+    width: 120px;
 }
 /* ===============================FOOTER CONTENT=================================== */
 footer{
@@ -113,8 +110,8 @@ footer{
 .divider{
     display: flex;
     justify-content:space-between;
-    width:15%;
-    margin:auto;
+    padding-left: 720px;
+    padding-right: 720px;
 }
 .small-divider{
     width: 12%;

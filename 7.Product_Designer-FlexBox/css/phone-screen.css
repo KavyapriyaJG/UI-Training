@@ -22,7 +22,11 @@
 
 /* =================================GALLERY CONTENT================================ */
 .gallery{
-    width:90%;
+    padding-left:20px;
+    padding-right:20px;
+}
+.gallery-image{
+    width:400px;
 }
 
 /* =================================BRANDS CONTENT================================= */
@@ -32,10 +36,11 @@
 /* Brands logo */
 .brands-wrapper{
     justify-content: space-between;
+    column-gap:0px;
 }
 .brand-logo{
-    width: 50%;
-    margin: 40px auto;
+    width: 200px;
+    padding: 45px;
 }
 
 /* ===============================FOOTER CONTENT=================================== */
@@ -45,5 +50,6 @@ footer{
 }
 /* Designer border */
 .divider{
-    width:60%;
+    padding-left: 130px;
+    padding-right: 130px;
 }
