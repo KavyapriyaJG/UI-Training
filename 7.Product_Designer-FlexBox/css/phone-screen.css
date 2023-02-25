@@ -1,0 +1,58 @@
+/* ================================TITLE CONTENT=================================== */
+.designer{
+    flex-direction:column-reverse;
+    row-gap:6px;
+    padding: 210px 0px 0px;
+}
+/* Designer Name */
+.designer-name{
+    row-gap: 12px;
+}
+.designer-name h1{
+    font-size: 50px;
+}
+.designer-name h3{
+    font-size: 30px;
+}
+/* Designer Mail */
+.designer-mail{
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* =================================GALLERY CONTENT================================ */
+.gallery{
+    padding: 0px 20px;
+}
+.gallery-image{
+    width:400px;
+}
+
+/* =================================BRANDS CONTENT================================= */
+.brand-heading h2{
+    font-size: 35px;
+}
+/* Brands logo */
+.brands-wrapper{
+    justify-content: space-between;
+    column-gap:0px;
+}
+.brand-logo{
+    width: 200px;
+    padding: 45px;
+}
+
+/* ===============================FOOTER CONTENT=================================== */
+footer{
+    row-gap: 40px;
+    margin:150px auto 50px;
+}
+/* Designer border */
+.small-divider{
+    width: 25px;
+    margin-right: 25px;
+}
+.large-divider{
+    width: 125px;
+}
