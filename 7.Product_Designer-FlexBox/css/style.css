@@ -50,8 +50,7 @@ body{
 /* =================================GALLERY CONTENT================================ */
 .gallery{
     margin-top:100px;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding: 0px 50px;
     display:flex;
     flex-wrap: wrap; 
     row-gap: 20px;
@@ -109,15 +108,14 @@ footer{
 /* -----------Designer Border---------- */
 .divider{
     display: flex;
-    justify-content:space-between;
-    padding-left: 720px;
-    padding-right: 720px;
+    justify-content:center;
 }
 .small-divider{
-    width: 12%;
+    width: 35px;
+    margin-right: 35px;
 }
 .large-divider{
-    width: 76%;
+    width: 200px;
 }
 /* ------------Social Icons------------- */
 .social-icons{

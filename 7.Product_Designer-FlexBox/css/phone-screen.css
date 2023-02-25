@@ -2,6 +2,7 @@
 .designer{
     flex-direction:column-reverse;
     row-gap:6px;
+    padding: 210px 0px 0px;
 }
 /* Designer Name */
 .designer-name{
@@ -22,8 +23,7 @@
 
 /* =================================GALLERY CONTENT================================ */
 .gallery{
-    padding-left:20px;
-    padding-right:20px;
+    padding: 0px 20px;
 }
 .gallery-image{
     width:400px;
@@ -49,7 +49,10 @@ footer{
     margin:150px auto 50px;
 }
 /* Designer border */
-.divider{
-    padding-left: 130px;
-    padding-right: 130px;
+.small-divider{
+    width: 25px;
+    margin-right: 25px;
+}
+.large-divider{
+    width: 125px;
 }
