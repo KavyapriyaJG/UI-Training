@@ -1,33 +1,66 @@
-// need to add comments for the code
-// add comments for functions using 
-/**
- * function description
- * @param value1
- * @return
- */
-// need correct indentation for the code
-// boolean value can be directly used for a conditon if(value){//code}else{//code}
-// print the entered numbers and the calculation done for the numbers in console
-
-
+//=========== OBJECT - CALCULATOR ================
 Calculator= {
-    isValid : function (value1, value2) {return typeof value1=='number' && typeof value2=='number'; },
+        isValid : /**
+                  * Type checking - for checking both parameters are of type number
+                  * @param number value1
+                  * @param number value2
+                  * @return boolean
+                  **/
+                function (value1, value2) {
+                    return typeof value1=='number' && typeof value2=='number'; 
+                },
 
-    addition : function (value1, value2){
-        if (this.isValid(value1, value2)==true)  return value1+ value2;
-        else  console.log("Enter 2 valid numbers"); },
+    addition : /**
+                  * Adds two numbers
+                  * @param number value1
+                  * @param number value2
+                  * @return number
+                **/
+                function (value1, value2){
+                    if (this.isValid(value1, value2))    
+                        return value1+ value2;
+                    else  
+                        console.log("Enter 2 valid numbers"); 
+                },
         
-    subtraction : function (value1, value2){
-        if (this.isValid(value1, value2)==true)  return value1- value2;
-        else  console.log("Enter 2 valid numbers");},
+    subtraction : /**
+                  * Subtracts two numbers
+                  * @param number value1
+                  * @param number value2
+                  * @return number
+                  **/
+                  function (value1, value2){
+                      if (this.isValid(value1, value2))   
+                          return value1- value2;
+                      else  
+                          console.log("Enter 2 valid numbers");
+                  },
 
-    multiplication : function (value1, value2){
-        if (this.isValid(value1, value2)==true)  return value1* value2;
-        else  console.log("Enter 2 valid numbers");},
+    multiplication : /**
+                      * Multiplies two numbers
+                      * @param number value1
+                      * @param number value2
+                      * @return number
+                      **/
+                      function (value1, value2){
+                          if (this.isValid(value1, value2))  
+                              return value1* value2;
+                          else  
+                              console.log("Enter 2 valid numbers");
+                      },
 
-    division : function (value1, value2){
-        if (this.isValid(value1, value2)==true)  return value1/ value2;
-        else  console.log("Enter 2 valid numbers");}
+    division : /**
+                  * Divides two numbers
+                  * @param number value1
+                  * @param number value2
+                  * @return number
+                **/
+                function (value1, value2){
+                    if (this.isValid(value1, value2))    
+                        return value1/ value2;
+                    else  
+                        console.log("Enter 2 valid numbers");
+                }
 
 }
 
@@ -37,7 +70,7 @@ number2 = 10;
 console.log("CALCULATOR");
 
 
-console.log(Calculator.addition(number1, number2));
-console.log(Calculator.subtraction(number1, number2));
-console.log(Calculator.multiplication(number1, number2));
-console.log(Calculator.division(number1, number2));
+console.log(number1 + " + " + number2 + " = " + Calculator.addition(number1, number2) + "\n");
+console.log(number1 + " - " + number2 + " = " + Calculator.subtraction(number1, number2) + "\n");
+console.log(number1 + " * " + number2 + " = " + Calculator.multiplication(number1, number2) + "\n");
+console.log(number1 + " / " + number2 + " = " + Calculator.division(number1, number2) + "\n");
