@@ -1,3 +1,15 @@
+// need to add comments for the code
+// add comments for functions using 
+/**
+ * function description
+ * @param value1
+ * @return
+ */
+// need correct indentation for the code
+// boolean value can be directly used for a conditon if(value){//code}else{//code}
+// print the entered numbers and the calculation done for the numbers in console
+
+
 Calculator= {
     isValid : function (value1, value2) {return typeof value1=='number' && typeof value2=='number'; },
 
