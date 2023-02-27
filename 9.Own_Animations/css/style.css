@@ -1,0 +1,141 @@
+body{
+  background-image: url('../images/cafe.jpg');
+  background-size: cover;
+}
+.machine-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 450px;
+  margin-left: -1020px;
+}
+.machine{
+  background-color:  #9c8250;
+  border: 5px solid;
+  height: 150px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.machine-brand{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.design-button{
+  border: solid 5px #403915;
+  background-color: #786f6e;
+  border-radius: 50%;
+  width: 50px;
+  height:50px;
+}
+/* Dispenser */
+.machine-dispenser{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nozzle{
+  background-color:#000;
+  height: 50px;
+  width: 70px;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+}
+.nozzle-tip{
+  background-color:#000;
+  height: 10px;
+  width: 50px;
+}
+/* Beverage */
+.beverage-drink{
+  width: 20px;
+  height: 70px;
+  opacity: 0;
+  z-index: 1;
+  background-color: #6F4E37;
+  animation: flow 3s 0s ease-in infinite;
+}
+@keyframes flow {
+  0% {
+    height: 100px;  
+    opacity: 1;
+  }
+  95% {
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    height: 0px;
+    opacity: 0;
+  }
+}
+/* Beverage mug */
+.beverage-mug{
+  height: 90px;
+  width: 80px;
+  position: absolute;
+  bottom:205px;
+  left:18%;
+  border: 3px solid;
+  background-color: #C0C0C0;
+}
+.beverage-mug-body{
+  background-color: #6F4E37;
+  height: 80px;
+  width: 70px;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  animation: fill 3s 0s ease-out infinite;
+}
+.beverage-mug-handle{
+  position: absolute;
+  top: 15px;
+  left: 80px;
+  height: 45px;
+  width: 15px;
+  border-top-right-radius: 40%;
+  border-bottom-right-radius: 40%;
+  background-color: #C0C0C0;
+  border: 3px solid;
+  
+}
+.beverage-mug-inner-handle{
+  position: absolute;
+  top: 2px;
+  height: 35px;
+  width: 9px;
+  border-top-right-radius: 40%;
+  border-bottom-right-radius: 40%;
+  background-color: #f0be50;
+  border: 3px solid;
+  border-left: 0px;
+  
+}
+@keyframes fill {
+  0% {
+    height: 0px;  
+    opacity: 0;
+  }
+  50% {
+    height: 55px;  
+    opacity: 1;
+  }
+  75%{
+    height: 60px;  
+    opacity: 1;
+  }
+  90% {
+    height: 65px;
+    opacity: 1;
+  }
+  100% {
+    height: 70px;
+    opacity: 1;
+  }
+}
