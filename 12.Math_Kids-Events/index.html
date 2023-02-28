@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Kids</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ===========================HEADER CONTENT======================== -->
+    <header>
+        <!-- Brand Name -->
+        <div class="brand-name">
+            <h2>MATH KIDS</h2>
+        </div>
+        <!-- Brand Description -->
+        <div class="brand-description">
+            <h2>KIDS LEARNING APP</h2>
+        </div>
+    </header>
+
+    <!-- ===========================PAGE CONTENT======================== -->
+    <main class="content-wrapper">
+
+        <!-- ===========================FIRST PAGE======================== -->
+        <section id="firstPage">
+            <!-- Page Heading -->
+            <div class="pageHeading">
+                <h2>1. Choose a Shape</h2>
+            </div>
+            <div class="content">
+                <!-- Available Shapes -->
+                <div id="circle">
+                    <div class="tickMark"></div>
+                </div>
+                <div id="equilateralTriangle">
+                    <div class="tickMark"></div>
+                </div>
+                <div id="square">
+                    <div class="tickMark"></div>
+                </div>
+            </div>
+            <!-- Moves to the next Page -->
+            <div class="next-stage">
+                <button id="btn1">NEXT</button>
+            </div>
+        </section>
+
+        <!-- ===========================SECOND PAGE======================== -->
+        <section id="secondPage">
+            <!-- Page Heading -->
+            <div class="pageHeading">
+                <h2 class="pageHeadingContent"></h2>
+            </div>
+            <div class="content">
+                <!-- Get the Parameter value -->
+                <input type="text" id="inp" placeholder="Enter in cms">
+            </div>
+            <!-- Moves to the next Page -->
+            <div class="next-stage">
+                <button id="btn2">CALCULATE</button>
+            </div>
+        </section>
+
+        <!-- ===========================THIRD PAGE======================== -->
+        <section id="thirdPage">
+            <!-- Page Heading -->
+            <div class="pageHeading">
+                <div id="shape"></div>
+                <h2 id="paramName"></h2>
+            </div>
+            <!-- Display Information about the Shape -->
+            <div class="content">
+                <div class="infoTable">
+                    <!-- Parameter -->
+                    <div class="infoRow">
+                        <div class="title" id="param"></div>
+                        <div class="symbol" id="paramFormula"></div>
+                        <div class="result" id="paramValue"></div>
+                    </div>
+                    <!-- Area -->
+                    <div class="infoRow">
+                        <div class="title">AREA</div>
+                        <div class="symbol" id="areaFormula"></div>
+                        <div class="result" id="areaValue"></div>
+                    </div>
+                    <!-- Perimeter -->
+                    <div class="infoRow">
+                        <div class="title">PERIMETER</div>
+                        <div class="symbol" id="perimeterFormula"></div>
+                        <div class="result" id="perimeterValue"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Refreshes and Reloads the first page -->
+            <div class="next-stage">
+                <button id="btn3">START AGAIN</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        //Stores info of all available shapes
+        shapes = { 
+            circle : {
+                name : 'circle',
+                parameter : 'radius',
+                symbols : ['r', '&pi;r&#xB2;','2&pi;r'],
+                value : undefined,
+                area : (value)=> 3.14*value*value,
+                perimeter : (value)=> 6.28*value*value,
+                pageHeading : "2. Enter Radius"
+            },
+            equilateralTriangle : {
+                name : 'equilateral triangle',
+                parameter : 'side',
+                symbols : ['s', '0.433 * s * s','3 * s'],
+                value : undefined,
+                area : (value)=> 0.43*value*value,
+                perimeter : (value)=> 3*value,
+                pageHeading : "2. Enter Side (Base & Height)"
+            },
+            square : {
+                name : 'square',
+                parameter : 'side',
+                symbols : ['s', 's * s','4 * s'],
+                value : undefined,
+                area : (value)=> value*value,
+                perimeter : (value)=> 4*value,
+                pageHeading : "2. Enter Side"
+            }
+
+        }
+        
+        /* ===========================FIRST PAGE======================== */
+
+        //On clicking a specific shape -> tick mark appears
+        document.querySelector(".content").addEventListener("click",(event)=>{ //Bubbling type of selection - commenting for my reference
+            let selected = event.target.id;
+            localStorage.setItem("selectedShape",selected);
+            console.log(localStorage.getItem("selectedShape"));
+
+            //Toggling TickMarks
+            previous = document.querySelector("#tick");
+            if(previous) previous.removeAttribute("id");
+            document.querySelector("#"+selected+" .tickMark").setAttribute("id","tick");
+
+            //When a shape is selected, NEXT Button is visible
+            document.getElementById("btn1").style.display="inline-block";
+        });
+
+        //On clicking NEXT button-> 1st page disappears, 2nd page displays
+        document.querySelector("#btn1").addEventListener("click", (event)=>{
+            document.getElementById("firstPage").style.display="none";
+            document.getElementById("secondPage").style.display="flex";
+
+            //Heading of 2nd page
+            var selected = localStorage.getItem("selectedShape");
+            document.querySelector(".pageHeadingContent").innerHTML = shapes[selected].pageHeading;
+        });
+
+
+
+        /* ===========================SECOND PAGE======================== */
+
+        //On clicking NEXT button-> 2nd page disappears, 3rd page displays
+        document.querySelector("#btn2").addEventListener("click", (event)=>{
+
+            //Store the Shape in a variable
+            var selected = localStorage.getItem("selectedShape");
+            // To get the value of the parameter
+            let val = document.querySelector("#inp").value;
+            if(val==""){
+                val=0;
+            }
+            localStorage.setItem("parameterValue",val);
+
+            document.getElementById("secondPage").style.display="none";
+            document.getElementById("thirdPage").style.display="flex";
+
+            // *********************************** SETTING VALUES FOR THE TABLE OF 3RD PAGE ***********************************
+
+            //Shape's drawing
+            document.querySelector("#shape").setAttribute('id',selected);
+
+            //Shape's name
+            document.querySelector("#paramName").innerHTML = shapes[selected].name;
+
+            // To set the parameter name of the shape
+            let param = shapes[selected].parameter;
+            document.querySelector(".title").innerHTML = param; // id is param
+
+            //Display formulas
+            let parameterFormula = shapes[selected].symbols[0];
+            let areaFormula = shapes[selected].symbols[1];
+            let perimeterFormula = shapes[selected].symbols[2];
+            document.querySelector("#paramFormula").innerHTML = parameterFormula;
+            document.querySelector("#areaFormula").innerHTML = areaFormula;
+            document.querySelector("#perimeterFormula").innerHTML = perimeterFormula;
+
+            //Calculate Area, Perimeter
+            let parameterValue = localStorage.getItem("parameterValue");
+            let areaValue = shapes[selected].area(parameterValue);
+            let perimeterValue = shapes[selected].perimeter(parameterValue);
+            document.querySelector("#paramValue").innerHTML = parameterValue+" cm";
+            document.querySelector("#areaValue").innerHTML = areaValue+" sq. cm";
+            document.querySelector("#perimeterValue").innerHTML = perimeterValue+" cm";
+        });
+
+        /* ===========================THIRD PAGE======================== */
+        document.querySelector("#btn3").addEventListener("click", (event)=> {
+            //localStorage.clearAll();
+            location.reload();
+        });
+
+
+
+
+
+
+
+        // pages={
+        //     1 : {
+        //         pageHeading : "1. Choose a Shape",
+        //         content : "<div id=\"circle\"></div><div id=\"equilateralTriangle\"></div><div id=\"square\"></div>",
+        //         btn : "NEXT"
+        //     },
+        //     2 : {
+        //         pageHeading : "2. Enter Parameter",
+        //         content : "",
+        //         btn : "CALCULATE"
+        //     },
+        //     3 :{
+        //         pageHeading : "1.Choose a Shape",
+        //         content : "<div id=\"circle\"></div><div id=\"equilateralTriangle\"></div><div id=\"square\"></div>",
+        //         btn : "START AGAIN"
+        //     }
+        // }
+    </script>
+</body>
+</html>

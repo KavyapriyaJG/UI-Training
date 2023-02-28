@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    overflow: auto;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ===========================HEADER CONTENT======================== */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    font-weight: 700;
+    background-color: #aae187;
+    color: #000;
+}
+header h2{
+    font-size: 20px;
+}
+
+/* ===========================PAGE CONTENT======================== */
+.content-wrapper{
+    display: flex;
+    background-color: #000;
+    color: #fff;
+}
+.content-wrapper > *{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* PAGE HEADING */
+.pageHeading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pageHeading h2{
+    margin-top: 30px;
+    font-size: 45px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+/* CONTENT PORTION */
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 35px;
+    margin-top: 100px;
+}
+/* ===========================FIRST PAGE CONTENT======================== */
+#circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 155px;
+    width: 155px;
+    border-radius: 50%;
+    background-color: #00987c;
+}
+#equilateralTriangle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 155px;
+    width: 100px; */
+
+	border-left: 83px solid transparent;
+	border-right: 83px solid transparent;
+    border-bottom: 150px solid #ffaadc;
+}
+#square{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 155px;
+    width: 155px;
+
+    background-color: #e0e0e0;
+}
+.tickMark{
+    width: 27px;
+    height: 55px;
+    background-color: transparent;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+
+    display:none;
+}
+/* The item is selected for tick */
+#tick{
+    display:inline-block;
+}
+#equilateralTriangle .tickMark{
+    position: absolute;
+    top: 605px;
+}
+
+/* NEXT BUTTON */
+.next-stage{
+    margin-top: 90px;
+}
+.next-stage button{
+    font-size: 20px;
+    width: 225px;
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    border: solid #fff;
+    border-radius: 5%;
+}
+#firstPage #btn1{
+    display: none;
+}
+
+/* ===========================SECOND PAGE CONTENT======================== */
+#secondPage{
+    display: none;
+}
+#inp{
+    height: 80px;
+    width: 715px;
+    font-size: 30px;
+    background-color: #000;
+    color: #fff;
+    border: solid #fff;
+}
+
+/* ===========================THIRD PAGE CONTENT======================== */
+#thirdPage{
+    display: none;
+}
+
+/* Content Wrapper */
+#thirdPage .content{
+    margin-top: 25px;
+}
+
+/* Result Table */
+.infoTable{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    width: 470px;
+    height: 175px;
+}
+.infoRow{
+    display: flex;
+    align-items: center;
+    height: 45px;
+}
+.infoRow > *{
+    padding: 15px;
+}
+.title{
+    text-transform: uppercase;
+    background-color: #0b62d5;
+    width: 205px;
+}
+.symbol{
+    background-color: #455e7f;
+    width: 135px;
+}
+.result{
+    background-color: #3388ff;
+    width: 135px;
+}
