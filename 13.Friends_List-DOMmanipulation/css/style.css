@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: auto;
+}
+body{
+    font-family: 'Lato', sans-serif;
+}
+/* ============================HEADER CONTENT============================ */
+header{
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+    height: 100px;
+    background-color: #372063;
+    color: #fff;
+}
+header h1{
+    font-weight: 100;
+    font-size: 25px;
+}
+
+/* ============================FRIENDS CONTENT============================ */
+.contentWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 15px;
+    width: 90%;
+    margin: 70px 95px;
+}
+.friendWrapper{
+    display: flex;
+    align-items: center;
+
+    height:100px;
+    width:500px;
+    background-color: #5167af;
+}
+.friendProfile{
+    margin-left: 10px;
+}
+.friendPic{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+/* Content */
+.friendContent{
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 20px;
+    color: #ffffff;
+}
+.friendName{
+    font-weight: 700;
+}
+.friendMail{
+
+}
