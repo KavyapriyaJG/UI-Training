@@ -1,0 +1,98 @@
+body{
+    width: 95%;
+    margin: auto;
+    background-color: #FFFFFF;
+}
+
+/* =============================HEADER CONTENT============================= */
+header{
+    width:100%;
+}
+.userName p{
+    display: none;
+}
+/* =============================End Of HEADER CONTENT============================= */
+
+
+/* =============================MAIN CONTENT============================= */
+.contentWrapper{
+    flex-direction: column;
+}
+.primaryContentWrapper{
+    width: 100%;
+}
+.secondaryContentWrapper{
+    width: 100%;
+}
+
+/* ---------------VIDEO STREAMING AREA--------------- */
+.videoStream{
+    width: 100%;
+    height: 176px;
+}
+.videoName{
+    font-size: 16px;
+}
+.videoDescription{
+    font-size: 12px;
+}
+/* ---------------End Of VIDEO STREAMING AREA--------------- */
+
+
+/* ---------------COMMENTS SECTION WRAPPER--------------- */
+.commentsWrapper{
+    align-items: flex-start;
+}
+.commentsSectionWrapper h2{
+    font-size: 14px;
+}
+.commentorName h3{
+    font-size: 13px;
+}
+.comment p{
+    font-size: 12px;
+}
+/* ---------------End Of COMMENTS SECTION WRAPPER--------------- */
+
+.contentRuler{
+    display: inline-block;
+    margin: 15px 0px 20px;
+}
+
+
+/* ---------------SECONDARY CONTENT WRAPPER--------------- */
+.secondaryContentWrapper h2{
+    font-size: 14px;
+}
+.posterWrapper{
+    width: 100%;
+    height: 565px;
+}
+/* ---------------End Of SECONDARY CONTENT WRAPPER--------------- */
+
+/* =============================End Of MAIN CONTENT============================= */
+
+
+/* =============================CHAT ICON============================= */
+.chatIconWrapper{
+    right:15px;
+}
+/* =============================End Of CHAT ICON============================= */
+
+
+/* =============================FOOTER CONTENT============================= */
+footer{
+    height: 85px;
+    margin-top: 5px;
+    padding: 15px 0px;
+}
+.copyrightsBar{
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.year h3{
+    font-size: 22px;
+}
+/* =============================End Of FOOTER CONTENT============================= */
