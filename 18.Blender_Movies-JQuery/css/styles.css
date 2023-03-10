@@ -1,0 +1,212 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    max-width: 1920px;
+    margin: auto;
+    background-color: #F5F5F5;
+    color: #222222;
+}
+img{
+    max-width: 100%;
+}
+/* =============================HEADER CONTENT============================= */
+header{
+    position: fixed;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 100%;
+    z-index: 1;
+    background-color: #F5F5F5;
+    box-shadow: 0px 3px 6px #00000029;
+}
+.titleBar{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width:75%;
+    margin: auto;
+}
+.brand h2{
+    font-size: 20px;
+}
+.userWrapper{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+}
+.userName h5{
+    font-size: 12px;
+    font-weight: 400;
+}
+.userPic{
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.userPic img{
+    width: 100%;
+}
+/* =============================End Of HEADER CONTENT============================= */
+
+
+/* =============================MAIN CONTENT============================= */
+main{
+    display:flex;
+    justify-content: center;
+    margin:85px 0px 0px;
+}
+.contentWrapper{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:75%;
+    margin: auto;
+}
+.primaryContentWrapper{
+    width: 75%;
+}
+.secondaryContentWrapper{
+    width:23%;
+}
+/* ---------------VIDEO STREAMING AREA--------------- */
+.videoDescriptionWrapper{
+    margin-top: 20px;
+}
+.videoWrapper{
+    position: relative;
+}
+.playButtonWrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.playButtonWrapper>*{
+    font-size: 80px;
+    color: #FFFFFF;
+}
+.videoStream{
+    height: 429px;
+    width: 970px;
+}
+.videoName{
+    font-size: 26px;
+    font-weight: 600;
+}
+.videoDescription{
+    font-size: 14px;
+    line-height: 22px;
+    margin: 10px 0px 25.7px;
+}
+hr{
+    border: 0.6px solid;
+    color: #cdcdcd;
+}
+/* ---------------End Of VIDEO STREAMING AREA--------------- */
+
+/* ---------------COMMENTS SECTION WRAPPER--------------- */
+.commentsSectionWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 23.3px;
+}
+.commentsSectionWrapper h2{
+    font-size: 20px;
+}
+.commentsWrapper{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.commentorPic{
+    max-width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.commentorName h3{
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+.comment p{
+    font-size: 13px;
+}
+.commentorWrapper{
+    margin-left: 15px;
+}
+
+.contentRuler{
+    display: none;
+}
+/* ---------------End Of COMMENTS SECTION WRAPPER--------------- */
+
+/* ---------------SECONDARY CONTENT WRAPPER--------------- */
+.secondaryContentWrapper > *{
+    margin-bottom: 15px;
+}
+.secondaryContentWrapper h2{
+    font-size: 20px;
+    margin-top:5px;
+}
+.posterWrapper{
+    display: inline-flex;
+    width: 300px;
+    height: 425px;
+}
+.posterWrapper img{
+    width: 100%;
+}
+/* ---------------End Of SECONDARY CONTENT WRAPPER--------------- */
+/* =============================End Of MAIN CONTENT============================= */
+
+
+/* =============================CHAT ICON============================= */
+.chatIconWrapper{
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #C432AE;
+    border-radius: 50%;
+}
+.chatIcon{
+    width: 30px;
+    height: 30px;
+    color: #fff;
+}
+/* =============================End Of CHAT ICON============================= */
+
+/* =============================FOOTER CONTENT============================= */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 100%;
+    background-color: #222222;
+    color: #fff;
+}
+.copyrightsBar{
+    display: flex;
+    justify-content: space-between;
+    width:75%;
+    margin: auto;
+}
+.copyright h3, .year h3{
+    font-size: 14px;
+}
+/* =============================End Of FOOTER CONTENT============================= */
