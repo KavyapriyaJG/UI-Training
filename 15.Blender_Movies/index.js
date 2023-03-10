@@ -8,9 +8,6 @@ let videoDescription = document.querySelector(".videoDescription");
 
 // Creating a video element
 videoStream.src = videoDetails.videoUrl;
-videoStream.controls = true;
-videoStream.height = 429; // in px
-videoStream.width = 970; // in px
 videoStream.setAttribute("poster","assets/images/thumbnail.jpeg");
 
 //Adding video element to the dom
@@ -86,3 +83,26 @@ for(;j<postersLength;j++){
 if(j==postersLength)
     document.querySelector(".secondaryContentWrapper").appendChild(postersFragment);
 //==================================== End OfPOSTER CONTENTS ====================================
+
+
+// ---------------------PLAY PAUSE FUNCTIONALITIES FOR VIDEO------------------
+let buttonWrapper = document.querySelector(".playButtonWrapper");
+let playButton = document.querySelector("#play");
+let pauseButton = document.querySelector("#pause");
+pauseButton.style.visibility="hidden";
+
+buttonWrapper.addEventListener("click", function(e){
+    if(e.target==playButton){
+        //PLAY BUTTON CLICKED
+        playButton.style.display = "none";
+        videoStream.controls = true;
+        videoStream.play();
+    }
+    else{
+        //PAUSE BUTTON CLICKED
+        pauseButton.style.visibility = (pauseButton.style.visibility=="hidden") ? "visible" : "hidden";
+        videoStream.controls = (videoStream.controls==true) ? false: true;
+        (videoStream.paused)? videoStream.play() : videoStream.pause();
+
+    }
+});

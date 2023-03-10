@@ -1,6 +1,4 @@
 body{
-    width: 95%;
-    margin: auto;
     background-color: #FFFFFF;
 }
 
@@ -8,7 +6,10 @@ body{
 header{
     width:100%;
 }
-.userName p{
+.titleBar{
+    width: 95%;
+}
+.userName h5{
     display: none;
 }
 /* =============================End Of HEADER CONTENT============================= */
@@ -16,6 +17,8 @@ header{
 
 /* =============================MAIN CONTENT============================= */
 .contentWrapper{
+    width: 95%;
+    margin: auto;
     flex-direction: column;
 }
 .primaryContentWrapper{
