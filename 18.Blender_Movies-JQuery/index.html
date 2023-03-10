@@ -27,7 +27,7 @@
             </div>
             <div class="userWrapper">
                 <div class="userName">
-                    <p>Steffy Jerry</p>
+                    <h5>Steffy Jerry</h5>
                 </div>
                 <div class="userPic">
                     <img src="images/userPic.jpeg" alt="User profile picture"/>
@@ -45,7 +45,13 @@
             <section class="primaryContentWrapper">
                 <!-- Video Straming Area -->
                 <section class="videoStreamWrapper">
-                    <video class="videoStream"></video>
+                    <div class="videoWrapper">
+                        <video class="videoStream"></video>
+                        <div class="playButtonWrapper">
+                            <i class="fa-sharp fa-regular fa-circle-play" id="play"></i>
+                            <i class="fa-sharp fa-regular fa-circle-pause" id="pause"></i>
+                        </div>
+                    </div>
                     <div class="videoDescriptionWrapper">
                         <h2 class="videoName"></h2>
                         <p class="videoDescription"></p>
@@ -91,6 +97,9 @@
     </footer>
     <!--==================================== End Of FOOTER BAR ====================================-->
 
+    <!-- Play and Pause Button for the video -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <!-- For the chat icon from Ion Icons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

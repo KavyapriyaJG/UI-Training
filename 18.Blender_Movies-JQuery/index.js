@@ -4,7 +4,7 @@ const postersAPI = "https://mocki.io/v1/8c9b378b-d248-4203-93b0-b8e7659ac346";
 $.getJSON(videoAPI,  function(videoDetails) {
             //==================================== VIDEO CONTENTS ====================================
             //Adding a video element attributes
-            $(".videoStream").attr({ "src": videoDetails.videoUrl,"controls": true, "height": "429", "width": "970","poster": "images/thumbnail.jpeg" });
+            $(".videoStream").attr({ "src": videoDetails.videoUrl, "poster": "images/thumbnail.jpeg" });
 
             //Adding video element to the dom
             $(".videoName").text(videoDetails.title);
@@ -14,8 +14,10 @@ $.getJSON(videoAPI,  function(videoDetails) {
 
 //Fetching Comments Details 
 $.getJSON(videoAPI,  function(videos) {
+    
+    //Creating a Fragment
+    $commentsFragment = $(document.createDocumentFragment());
     (videos.comments).forEach((comments)=>{
-        console.log(comments);
             //==================================== COMMENTS SECTION ====================================
                 $commentsWrapper = $(`<article class="commentsWrapper">`);
 
@@ -42,15 +44,21 @@ $.getJSON(videoAPI,  function(videos) {
                 $commentsWrapper.append($commentorPic);
                 $commentsWrapper.append($commentorWrapper);
                 
-                // Adding the comments fragment to the dom
-                $(".commentsSectionWrapper").append($commentsWrapper);
+                // Adding the comment to the Fragment
+                $commentsFragment.append($commentsWrapper);
 
             //==================================== End Of COMMENTS SECTION ====================================      
     });
+
+            // Adding the comments fragment to the dom
+            $(".commentsSectionWrapper").append($commentsFragment);
 });
 
 //Fetching Poster Details 
 $.getJSON(postersAPI,  function(posters) {
+
+    //Creating a Fragment
+    $postersFragment = $(document.createDocumentFragment());
     //==================================== POSTER CONTENTS ====================================
     posters.forEach((poster)=>{
         $posterWrapper  = $("<div class=posterWrapper>");
@@ -58,9 +66,36 @@ $.getJSON(postersAPI,  function(posters) {
 
         $posterWrapper.append($image);
 
-        // Adding the poster fragment to the dom
+        // Adding the poster to the Fragment
         $(".secondaryContentWrapper").append($posterWrapper); 
         
     //==================================== End Of POSTER CONTENTS ====================================    
     });
+
+        // Adding the poster fragment to the dom
+        $(".secondaryContentWrapper").append($postersFragment); 
 }); 
+
+
+// ---------------------PLAY PAUSE FUNCTIONALITIES FOR VIDEO------------------
+$videoStream = $(".videoStream");
+$buttonWrapper = $(".playButtonWrapper");
+$playButton = $("#play");
+$pauseButton = $("#pause");
+$pauseButton.css("visibility","hidden");
+
+$buttonWrapper.click(function(e){
+    if(e.target==$playButton){
+        //PLAY BUTTON CLICKED
+        $playButton.attr("display","none");
+        $videoStream.controls = true;
+        $videoStream.play();
+    }
+    else{
+        //PAUSE BUTTON CLICKED
+        $pauseButton.css("visibility", ($pauseButton.attr("visibility")=="hidden") ? "visible" : "hidden");
+        $videoStream.controls = ($videoStream.controls==true) ? false: true;
+        ($videoStream.paused)? $videoStream.trigger('play') : $videoStream.trigger('play');
+
+    }
+});
