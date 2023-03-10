@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blender Movies</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/phone-screen.css" media="only screen and (max-width: 767px)">
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- External JS -->
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <!--==================================== TITLE BAR ====================================-->
+    <header>
+        <div class="titleBar">
+            <div class="brand">
+                <h2>Blender Movies</h2>
+            </div>
+            <div class="userWrapper">
+                <div class="userName">
+                    <p>Steffy Jerry</p>
+                </div>
+                <div class="userPic">
+                    <img src="images/userPic.jpeg" alt="User profile picture"/>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--==================================== End Of TITLE BAR ====================================-->
+
+    <!--==================================== MAIN CONTENT ====================================-->
+    <main>
+        <div class="contentWrapper">
+
+            <!--==================================== PRIMARY CONTENT ====================================-->
+            <section class="primaryContentWrapper">
+                <!-- Video Straming Area -->
+                <section class="videoStreamWrapper">
+                    <video class="videoStream"></video>
+                    <div class="videoDescriptionWrapper">
+                        <h2 class="videoName"></h2>
+                        <p class="videoDescription"></p>
+                    </div>
+                </section>
+                <hr>
+                <!-- Comments Section -->
+                <section class="commentsSectionWrapper">
+                    <h2>Comments</h2>
+                    <!-- Comments Wrapper goes here -->
+                </section>
+            </section>
+            <!--==================================== End Of PRIMARY CONTENT ====================================-->
+
+            <hr class="contentRuler">
+
+            <!--==================================== SECONDARY CONTENT ====================================-->
+            <aside class="secondaryContentWrapper">
+                <h2>Upcoming Projects</h2>
+                <!-- Posters content goes here -->
+            </aside>
+            <!--==================================== End Of SECONDARY CONTENT ====================================-->
+        </div>
+    </main>
+    <!--==================================== End Of MAIN CONTENT ====================================-->
+
+    <!--==================================== CHAT ICON ====================================-->
+    <div class="chatIconWrapper">
+        <ion-icon name="chatbubbles" class="chatIcon"></ion-icon>
+    </div>
+    <!--==================================== End OfCHAT ICON ====================================-->
+
+    <!--==================================== FOOTER BAR ====================================-->
+    <footer>
+        <div  class="copyrightsBar">
+            <div class="copyright">
+                <h3>&copy; Copyrights 2022</h3>
+            </div>
+            <div class="year">
+                <h3>Blender Movies</h3>
+            </div>
+        </div>
+    </footer>
+    <!--==================================== End Of FOOTER BAR ====================================-->
+
+    <!-- For the chat icon from Ion Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
