@@ -1,0 +1,24 @@
+@mixin css-reset{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    overflow:auto;
+}
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+}
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex-centering{
+    justify-content: center;
+    align-items: center;
+}
+@mixin social-icons-sizing{
+    width: 50px;
+    height: 50px;
+    font-size:32px;
+    border-radius:50%;
+}
