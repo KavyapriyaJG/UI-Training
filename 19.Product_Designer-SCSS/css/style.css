@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/* ================================TITLE CONTENT=================================== */
+.designer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 130px;
+  padding: 40px 172px 0px;
+  /* Designer Mail */
+  /* Designer Name*/
+}
+.designer .designer-mail {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: 24px;
+}
+.designer .designer-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 6px;
+}
+.designer .designer-name h1 {
+  font-weight: 300;
+  font-size: 150px;
+}
+.designer .designer-name h1 .bold {
+  font-weight: 900;
+}
+.designer .designer-name h3 {
+  font-size: 50px;
+  color: #cecece;
+}
+.designer .designer-name h3 .blue {
+  color: #4990e2;
+}
+
+/* ================================End Of TITLE CONTENT=================================== */
+/* =================================GALLERY CONTENT================================ */
+.gallery {
+  margin-top: 100px;
+  padding: 0px 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+.gallery .gallery-image {
+  width: 400px;
+}
+.gallery .gallery-image img {
+  width: 100%;
+}
+
+/* =================================End Of GALLERY CONTENT================================ */
+/* =================================BRANDS CONTENT================================= */
+.brands-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 100px;
+  margin-top: 175px;
+  /* ----------Brands Heading--------------- */
+  /* --------Brands Logos Wrapper----------- */
+}
+.brands-content .brand-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.brands-content .brand-heading h3 {
+  font-size: 50px;
+  color: #cecece;
+}
+.brands-content .brand-heading h3 .green {
+  color: #87d979;
+}
+.brands-content .brands-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 100px;
+}
+.brands-content .brands-wrapper .brand-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 120px;
+}
+
+/* =================================End Of BRANDS CONTENT================================= */
+/* ===============================FOOTER CONTENT=================================== */
+footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 120px;
+  margin: 280px auto 170px;
+  /* -----------Designer Border---------- */
+  /* ------------Social Icons------------- */
+  /* -------- Caption for the page---------- */
+}
+footer .divider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+footer .divider .small-divider {
+  width: 35px;
+  margin-right: 35px;
+}
+footer .divider .large-divider {
+  width: 200px;
+}
+footer .social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}
+footer .social-icons .icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 32px;
+  border-radius: 50%;
+  border: 1px solid #bab6b6;
+}
+footer .footer-caption {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+footer .footer-caption p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ===============================End Of FOOTER CONTENT=================================== */
+@media (max-width: 786px) {
+  /* ================================TITLE CONTENT=================================== */
+  .designer {
+    flex-direction: column-reverse;
+    row-gap: 6px;
+    padding: 210px 0px 0px;
+    /* Designer Name */
+    /* Designer Mail */
+  }
+  .designer .designer-name {
+    row-gap: 12px;
+  }
+  .designer .designer-name h1 {
+    font-size: 50px;
+  }
+  .designer .designer-name h3 {
+    font-size: 30px;
+  }
+  .designer .designer-mail {
+    font-weight: 600;
+    justify-content: center;
+    font-size: 16px;
+  }
+  /* ================================End Of TITLE CONTENT=================================== */
+  /* =================================GALLERY CONTENT================================ */
+  .gallery {
+    padding: 0px 20px;
+  }
+  /* =================================End Of GALLERY CONTENT================================ */
+  /* =================================BRANDS CONTENT================================= */
+  .brands-content {
+    /* Brands logo */
+  }
+  .brands-content .brand-heading h3 {
+    font-size: 35px;
+  }
+  .brands-content .brands-wrapper {
+    justify-content: space-between;
+    column-gap: 0px;
+  }
+  .brands-content .brands-wrapper .brand-logo {
+    width: 200px;
+    padding: 45px;
+  }
+  /* =================================End Of BRANDS CONTENT================================= */
+  /* ===============================FOOTER CONTENT=================================== */
+  footer {
+    row-gap: 40px;
+    margin: 150px auto 50px;
+    /* Designer border */
+  }
+  footer .divider .small-divider {
+    width: 25px;
+    margin-right: 25px;
+  }
+  footer .divider .large-divider {
+    width: 125px;
+  }
+  /* ===============================End Of FOOTER CONTENT=================================== */
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,245 @@
+@import "./variables";
+@import "./mixins";
+
+*{
+    @include css-reset;
+}
+
+body{
+    background-color: #000;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* ================================TITLE CONTENT=================================== */
+.designer{
+    @include flex-column;
+    row-gap: $designer-row-gap;
+    padding: $designer-padding;
+
+    /* Designer Mail */
+    .designer-mail{
+        @include flex-row;
+        justify-content: flex-end;
+        font-size: $designer-mail-font-size;
+    }
+
+    /* Designer Name*/
+    .designer-name{
+        @include flex-column;
+        @include flex-centering;
+        row-gap: $designer-name-row-gap;
+
+        h1{
+            font-weight: 300;
+            font-size: $text-size-h1;
+
+            .bold{
+                font-weight: 900;
+            }
+        }
+        h3{
+            font-size: $text-size-h3;
+            color: $text-dull;
+
+            .blue{
+                color: $text-color-blue;
+            }
+        }
+
+
+    }
+}
+/* ================================End Of TITLE CONTENT=================================== */
+
+
+/* =================================GALLERY CONTENT================================ */
+.gallery{
+    margin-top:100px;
+    padding: $gallery-padding;
+    @include flex-row;
+    justify-content: center;
+    flex-wrap: wrap; 
+    row-gap: 20px;
+    column-gap: 20px;
+
+    .gallery-image{
+        width: 400px;
+
+        img{
+            width: 100%;
+        }
+    }
+}
+
+/* =================================End Of GALLERY CONTENT================================ */
+
+
+/* =================================BRANDS CONTENT================================= */
+.brands-content{
+    @include flex-column; 
+    row-gap:100px;
+    margin-top: 175px;
+
+    /* ----------Brands Heading--------------- */
+    .brand-heading{
+        @include flex-row;
+        justify-content: center;
+
+        h3{
+            font-size: $text-size-h3;
+            color: $text-dull;
+
+            .green{
+                color: $text-color-green;
+            }
+        }
+
+    }
+
+    /* --------Brands Logos Wrapper----------- */
+    .brands-wrapper{
+        @include flex-row;
+        flex-wrap: wrap;
+        @include flex-centering;
+        column-gap: $brands-wrapper-column-gap;
+
+        .brand-logo{
+            @include flex-row;
+            justify-content: center;
+            width: $logo-width;
+        }
+    }
+
+}
+/* =================================End Of BRANDS CONTENT================================= */
+
+
+/* ===============================FOOTER CONTENT=================================== */
+footer{
+    
+    @include flex-column; 
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: $footer-row-gap;
+    margin: $footer-margin;
+
+    /* -----------Designer Border---------- */
+    .divider{
+        @include flex-row;
+        justify-content:center;
+
+        .small-divider{
+            width: $divider-smaller-width;
+            margin-right: $divider-smaller-width;
+        }
+        .large-divider{
+            width: $divider-larger-width;
+        }
+    }
+
+    /* ------------Social Icons------------- */
+    .social-icons{
+        @include flex-row;
+        @include flex-centering;
+        column-gap: 20px;
+
+        .icon{
+            @include flex-row;
+            @include flex-centering;
+            @include social-icons-sizing;
+            border: 1px solid #bab6b6;
+        }
+    }
+
+    /* -------- Caption for the page---------- */
+    .footer-caption{
+        @include flex-row;
+        justify-content: center;
+
+        p{
+            font-size: $text-size-p;
+            font-weight: 600;
+        }
+    }
+}
+
+/* ===============================End Of FOOTER CONTENT=================================== */
+
+
+@media (max-width: 786px) {
+    @import "./phone-screen-variables";
+        /* ================================TITLE CONTENT=================================== */
+            .designer{
+                flex-direction:column-reverse;
+                row-gap: $designer-row-gap;
+                padding: $designer-padding;
+                
+                /* Designer Name */
+                .designer-name{
+                    row-gap: $designer-name-row-gap;
+                    h1{
+                        font-size: $text-size-h1;
+                    }
+                    h3{
+                        font-size: $text-size-h3;
+                    }
+                }
+                /* Designer Mail */
+                .designer-mail{
+                    font-weight: 600;
+                    justify-content: center;
+                    font-size: $designer-mail-font-size;
+                }
+            }
+        /* ================================End Of TITLE CONTENT=================================== */
+
+
+        /* =================================GALLERY CONTENT================================ */
+            .gallery{
+                padding: $gallery-padding;
+            }
+            /* =================================End Of GALLERY CONTENT================================ */
+
+
+            /* =================================BRANDS CONTENT================================= */
+            .brands-content{
+                .brand-heading{
+                    h3{
+                    font-size: $text-size-h3+5;
+                    }
+                }
+                /* Brands logo */
+                .brands-wrapper{
+                    justify-content: space-between;
+                    column-gap:$brands-wrapper-column-gap;
+    
+                    .brand-logo{
+                        width: $logo-width;
+                        padding: 45px;
+                    }
+                }
+            }
+            /* =================================End Of BRANDS CONTENT================================= */
+
+
+
+            /* ===============================FOOTER CONTENT=================================== */
+            footer{
+                row-gap: $footer-row-gap;
+                margin: $footer-margin;
+                    
+                /* Designer border */
+                .divider{
+                    .small-divider{
+                        width: $divider-smaller-width;
+                        margin-right: $divider-smaller-width;
+                    }
+                    .large-divider{
+                        width: $divider-larger-width;
+                    }
+                }
+            }
+            /* ===============================End Of FOOTER CONTENT=================================== */
+
+}
